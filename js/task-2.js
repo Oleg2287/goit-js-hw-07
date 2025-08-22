@@ -27,6 +27,19 @@ const images = [
 
 const galleryContainer = document.querySelector(".gallery");
 
+galleryContainer.style.display = "flex";
+galleryContainer.style.flexWrap = "wrap";
+galleryContainer.style.gap = "25px";
+galleryContainer.style.listStyle = "none";
+galleryContainer.style.justifyContent = "center";
+galleryContainer.style.alignItems = "center";
+galleryContainer.style.borderRadius = "8px";
+galleryContainer.style.padding = "16px";
+galleryContainer.style.maxWidth = "1280px";
+galleryContainer.style.margin = "0 auto";
+
+
+
 images.forEach(image => {
   const imgElement = document.createElement("img");
   imgElement.src = image.url;
