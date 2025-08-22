@@ -33,16 +33,10 @@ galleryContainer.style.gap = "25px";
 galleryContainer.style.listStyle = "none";
 galleryContainer.style.justifyContent = "center";
 galleryContainer.style.alignItems = "center";
-galleryContainer.style.borderRadius = "8px";
-galleryContainer.style.padding = "16px";
-galleryContainer.style.maxWidth = "1280px";
-galleryContainer.style.margin = "0 auto";
 
 
+const galleryItems = images.map(image => {
+  return `<li><img src="${image.url}" alt="${image.alt}" width="300" height="200" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"></li>`;
+}).join("");
 
-images.forEach(image => {
-  const imgElement = document.createElement("img");
-  imgElement.src = image.url;
-  imgElement.alt = image.alt;
-  galleryContainer.appendChild(imgElement);
-});
+galleryContainer.innerHTML = galleryItems;  
